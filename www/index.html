@@ -66,12 +66,18 @@
                     <div class="block">
                         <p>Page content goes here</p>
                         <!-- Link to another page -->
-                        <a href="/about/" data-view=".page-content">About app</a>
-
+                        <!-- en el atributo data-view tenemos que poner adentro de qué div queremos que se abra-->  
+                        <a href="/about/" data-view=".page-content">About app</a> <!-- cuando ponemos los links en el data-view siempre 
+                                                                                    siempre tiene que decir .page-content y 
+                                                                                 no hace falta poner el link en myapp. con ponerlo en el
+                                                                                href ya alcanza-->
+                                                                                                        
+                        <a href="/pagina2/" data-view=".page">Pagina 2</a>
                         <!-- In data-popup attribute we specify CSS selector of popup we need to open -->
-                        <p><a href="#" data-popup=".my-popup" class="popup-open">Open Popup</a></p>
-
-                        <!-- And somewhere in DOM -->
+                        <p><a id='l1' href="#" data-popup=".my-popup" class="popup-open">Open Popup</a></p>
+                        <p><a id='l2'href="#" data-popup=".my-popup" class="popup-open">Open Same Popup</a></p>
+                            <!--el href='#' no hace falta. no cambia nada si lo sacamos'-->
+                        <!-- And somewhere in DOM --> <!--encualquierladodel html podmeos poner distintos div con class='popup nombrepopup'-->
                         <div class="popup my-popup">
                             <div class="view">
                                 <div class="page">
@@ -81,12 +87,13 @@
                                             <div class="title">Popup</div>
                                             <div class="right">
                                                 <!-- Link to close popup -->
-                                                <a class="link popup-close">Close</a>
+                                                <a class="link popup-close">Close</a> <!--para que el popup se cierre tenemos que
+                                                                                ponerle la clase popup-close al elemento a--> 
                                             </div>
                                         </div>
                                     </div>
                                     <div class="page-content">
-                                      ...
+                                        <a id='linkGoogle' href="www.google.com.ar" >Ir a Google</a>                                        
                                     </div>
                                 </div>
                             </div>
